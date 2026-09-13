@@ -1,0 +1,55 @@
+{
+  "args": {
+
+  },
+  "data": "",
+  "files": {
+
+  },
+  "form": {
+    "nome": "Felipe Monari",
+    "telefone": "43988274958",
+    "email": "felipemonari20@gmail.com",
+    "data_nasc": "2006-07-01",
+    "logradouro": "Avenida São João, 277",
+    "cidade": "Londrina-PR",
+    "numero": "277",
+    "modelos": "iphone_16",
+    "armazenamento": "128",
+    "cor": "preto",
+    "pagamento": "credito"
+  },
+  "headers": {
+    "host": "postman-echo.com",
+    "sec-fetch-dest": "document",
+    "accept-encoding": "gzip, br",
+    "priority": "u=0, i",
+    "accept-language": "pt-BR",
+    "content-length": "232",
+    "cache-control": "max-age=0",
+    "upgrade-insecure-requests": "1",
+    "content-type": "application/x-www-form-urlencoded",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.137.0 Chrome/148.0.7778.280 Electron/42.10.0 Safari/537.36",
+    "origin": "null",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-user": "?1",
+    "x-forwarded-proto": "https",
+    "cookie": "__cf_bm=Jv8eeOEowc1Tkhk0vGR_..Ki6PZlFTJJqcEpYCYF9yc-1789341278.3790529-1.0.1.1-s2LRFeY8tw8yuK0vsJ0YncJH8zhB9246b.gbzEnAy_xj2jCqLfHsEREzVayw33i8tYwz9UcMObRwnPQdiC6Va.HAWcpb3xocgx07OTj4WIU_fiRF9bb3R0byzVnKRAxD; _cfuvid=CTLKYxYRWrB5yfDfs2fsOcX3KHg1SNKmscEuo6GbsLQ-1789341278.3790529-1.0.1.1-P9CARieswO246ejgKD4sQk5MUfw1hXqjD_SVMKau8Iw"
+  },
+  "json": {
+    "nome": "Felipe Monari",
+    "telefone": "43988274958",
+    "email": "felipemonari20@gmail.com",
+    "data_nasc": "2006-07-01",
+    "logradouro": "Avenida São João, 277",
+    "cidade": "Londrina-PR",
+    "numero": "277",
+    "modelos": "iphone_16",
+    "armazenamento": "128",
+    "cor": "preto",
+    "pagamento": "credito"
+  },
+  "url": "https://postman-echo.com/post"
+}
