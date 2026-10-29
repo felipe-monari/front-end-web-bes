@@ -10,6 +10,39 @@ function executar(evento) {
     erroNome.classList.add("erro");
     erroNome.classList.remove("oculto");
   }  
+
+  const idade = document.querySelector("#idade");
+  const erroIdade = document.querySelector("#erro-idade");
+
+  if (idade.value == "") {
+    erroIdade.textContent = "Idade não pode ser vazio";
+    erroIdade.classList.add("erro");
+    erroIdade.classList.remove("oculto");
+
+  } else if (Number(idade.value) <18 ){
+    erroIdade.textContent = "É necessário ter 18 anos!";
+    erroIdade.classList.add("erro");
+    erroIdade.classList.remove("oculto");
+  }
+
+  const email = document.querySelector("#email");
+  const erroEmail = document.querySelector("#erro-email");
+
+  if (email.value == "") {
+    erroEmail.textContent = "E-mail não pode ser vazio!";
+    erroEmail.classList.add("erro");
+    erroEmail.classList.remove("oculto");
+  } // fazer a validação do email usando regex
+
+  const termos = document.querySelector("#termos");
+  const erroTermos = document.querySelector("#erro-termos");
+  
+  if (!termos.checked) {
+    erroTermos.textContent = ("É preciso aceitar os termos");
+    erroTermos.classList.add("erro");
+    erroTermos.classList.remove("oculto");
+  }
+
 }
 
 function limparErros() {
