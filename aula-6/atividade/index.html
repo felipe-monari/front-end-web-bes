@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Solar</title>
+  <link rel="stylesheet" href="./styles/global.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a class="logo" href="#inicio">Sistema Solar</a>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#planetas">Planetas</a>
+      <a href="#comparacao">Comparação</a>
+      <a href="#curiosidades">Curiosidades</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="destaque">
+      <div class="destaque-texto">
+        <h1>Oito planetas, uma só estrela</h1>
+        <p>
+          O Sistema Solar se formou há cerca de 4,6 bilhões de anos.
+          Aqui você encontra um resumo dos planetas, o tamanho de cada um
+          e algumas curiosidades.
+        </p>
+        <div class="tags">
+          <span class="tag">4 rochosos</span>
+          <span class="tag">2 gigantes gasosos</span>
+          <span class="tag">2 gigantes de gelo</span>
+        </div>
+      </div>
+
+      <div class="destaque-sol" aria-hidden="true"></div>
+
+      <ul class="destaque-numeros">
+        <li><strong>8</strong> planetas</li>
+        <li><strong>5</strong> planetas anões reconhecidos</li>
+        <li><strong>1</strong> estrela</li>
+      </ul>
+    </section>
+
+    <section id="planetas">
+      <h2>Os planetas</h2>
+      <div class="grade-planetas">
+
+        <article class="card">
+          <div class="planeta mercurio"></div>
+          <h3>Mercúrio</h3>
+          <p>O menor planeta e o mais próximo do Sol.</p>
+          <p class="dado">Ano: 88 dias terrestres</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta venus"></div>
+          <h3>Vênus</h3>
+          <p>O mais quente de todos, por causa do efeito estufa.</p>
+          <p class="dado">Ano: 225 dias terrestres</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta terra"></div>
+          <h3>Terra</h3>
+          <p>O único lugar conhecido onde existe vida.</p>
+          <p class="dado">Ano: 365 dias</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta marte"></div>
+          <h3>Marte</h3>
+          <p>O planeta vermelho, com o maior vulcão do Sistema Solar.</p>
+          <p class="dado">Ano: 687 dias terrestres</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta jupiter"></div>
+          <h3>Júpiter</h3>
+          <p>O maior de todos, com uma tempestade que dura séculos.</p>
+          <p class="dado">Ano: 12 anos terrestres</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta saturno"></div>
+          <h3>Saturno</h3>
+          <p>Famoso pelos anéis feitos de gelo e rocha.</p>
+          <p class="dado">Ano: 29 anos terrestres</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta urano"></div>
+          <h3>Urano</h3>
+          <p>Gira praticamente deitado em relação à sua órbita.</p>
+          <p class="dado">Ano: 84 anos terrestres</p>
+        </article>
+
+        <article class="card">
+          <div class="planeta netuno"></div>
+          <h3>Netuno</h3>
+          <p>O mais distante, com os ventos mais fortes medidos.</p>
+          <p class="dado">Ano: 165 anos terrestres</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="comparacao">
+      <h2>Diâmetro comparado (Terra = 1)</h2>
+      <div class="barras">
+
+        <div class="linha">
+          <span class="nome">Mercúrio</span>
+          <div class="trilho"><div class="barra" style="width: 4%"></div></div>
+          <span class="valor">0,38</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Vênus</span>
+          <div class="trilho"><div class="barra" style="width: 9%"></div></div>
+          <span class="valor">0,95</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Terra</span>
+          <div class="trilho"><div class="barra" style="width: 9%"></div></div>
+          <span class="valor">1,00</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Marte</span>
+          <div class="trilho"><div class="barra" style="width: 5%"></div></div>
+          <span class="valor">0,53</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Júpiter</span>
+          <div class="trilho"><div class="barra" style="width: 100%"></div></div>
+          <span class="valor">11,2</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Saturno</span>
+          <div class="trilho"><div class="barra" style="width: 84%"></div></div>
+          <span class="valor">9,4</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Urano</span>
+          <div class="trilho"><div class="barra" style="width: 36%"></div></div>
+          <span class="valor">4,0</span>
+        </div>
+        <div class="linha">
+          <span class="nome">Netuno</span>
+          <div class="trilho"><div class="barra" style="width: 35%"></div></div>
+          <span class="valor">3,9</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="curiosidades">
+      <h2>Curiosidades</h2>
+      <div class="grade-curiosidades">
+        <div class="curiosidade grande">
+          <h3>Um dia em Vênus é maior que o ano</h3>
+          <p>
+            Vênus leva cerca de 243 dias terrestres para girar uma vez em torno
+            de si, mas só 225 para dar a volta no Sol.
+          </p>
+        </div>
+        <div class="curiosidade">
+          <h3>Chove diamante?</h3>
+          <p>Cientistas acreditam que isso pode acontecer em Urano e Netuno.</p>
+        </div>
+        <div class="curiosidade">
+          <h3>Luas</h3>
+          <p>Saturno tem mais de 140 luas confirmadas.</p>
+        </div>
+        <div class="curiosidade">
+          <h3>Sem superfície</h3>
+          <p>Júpiter e Saturno não têm uma superfície sólida como a da Terra.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
