@@ -1,0 +1,319 @@
+:root {
+  --fundo: #0f1b3d;
+  --fundo-card: #18274f;
+  --borda: #2c3d6e;
+  --texto: #e8eefc;
+  --texto-suave: #a9b7d9;
+  --destaque: #f2c14e;
+  --azul: #4cc9f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 32px;
+  background-color: rgba(15, 27, 61, 0.95);
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--destaque);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+.menu a {
+  color: var(--texto);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.menu a:hover {
+  border-bottom-color: var(--destaque);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+.destaque {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-areas:
+    "texto sol"
+    "numeros numeros";
+  gap: 32px;
+  align-items: center;
+}
+
+.destaque-texto {
+  grid-area: texto;
+}
+
+.destaque-texto h1 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.destaque-texto p {
+  color: var(--texto-suave);
+  max-width: 55ch;
+  margin-bottom: 20px;
+}
+
+.destaque-sol {
+  grid-area: sol;
+  justify-self: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffe9a6, #f2c14e 45%, #e08a1e 100%);
+  box-shadow: 0 0 60px 10px rgba(242, 193, 78, 0.35);
+}
+
+.destaque-numeros {
+  grid-area: numeros;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.destaque-numeros li {
+  flex: 1 1 200px;
+  padding: 16px 20px;
+  background-color: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  color: var(--texto-suave);
+}
+
+.destaque-numeros strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  color: var(--destaque);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border: 1px solid var(--azul);
+  border-radius: 20px;
+  color: var(--azul);
+  font-size: 0.9rem;
+}
+
+.grade-planetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 24px 18px;
+  background-color: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--destaque);
+}
+
+.card p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.card .dado {
+  margin-top: auto;
+  color: var(--destaque);
+  font-size: 0.85rem;
+}
+
+.planeta {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.mercurio { background: radial-gradient(circle at 35% 35%, #d9d9d9, #8c8c8c); }
+.venus    { background: radial-gradient(circle at 35% 35%, #f8e0a8, #d49a3c); }
+.terra    { background: radial-gradient(circle at 35% 35%, #7fd1ff, #1f6fb5 60%, #2e8b57); }
+.marte    { background: radial-gradient(circle at 35% 35%, #ff9f7a, #b23a1e); }
+.jupiter  { background: linear-gradient(180deg, #e8c9a0 0 20%, #b98456 20% 40%, #e8c9a0 40% 60%, #a86a40 60% 80%, #e8c9a0 80%); }
+.saturno  { background: linear-gradient(180deg, #f1dfae 0 25%, #d4b06a 25% 50%, #f1dfae 50% 75%, #c19a55 75%); }
+.urano    { background: radial-gradient(circle at 35% 35%, #c9f4f7, #5bc0c9); }
+.netuno   { background: radial-gradient(circle at 35% 35%, #8fb4ff, #2a46b8); }
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nome {
+  flex: 0 0 90px;
+}
+
+.trilho {
+  flex: 1;
+  height: 14px;
+  background-color: var(--fundo-card);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.barra {
+  height: 100%;
+  min-width: 6px;
+  background-color: var(--azul);
+  border-radius: 7px;
+}
+
+.valor {
+  flex: 0 0 48px;
+  text-align: right;
+  color: var(--destaque);
+  font-variant-numeric: tabular-nums;
+}
+
+.grade-curiosidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.curiosidade {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px;
+  background-color: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+}
+
+.curiosidade h3 {
+  font-size: 1.15rem;
+}
+
+.curiosidade p {
+  color: var(--texto-suave);
+}
+
+.curiosidade.grande {
+  grid-column: 1 / -1;
+  border-left: 5px solid var(--destaque);
+}
+
+@media (max-width: 800px) {
+  .destaque {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sol"
+      "texto"
+      "numeros";
+  }
+
+  .destaque-texto h1 {
+    font-size: 2.1rem;
+  }
+
+  .destaque-sol {
+    width: 150px;
+    height: 150px;
+  }
+
+  .grade-curiosidades {
+    grid-template-columns: 1fr;
+  }
+
+  .topo {
+    padding: 12px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card,
+  .menu a {
+    transition: none;
+  }
+}
