@@ -1,0 +1,183 @@
+:root {
+  --fundo: #eef1f7;
+  --card: #ffffff;
+  --texto: #1f2937;
+  --suave: #6b7280;
+  --borda: #cfd6e4;
+  --primaria: #2447b5;
+  --erro: #c62828;
+  --ok: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  background-color: var(--card);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(31, 41, 55, 0.08);
+}
+
+.cabecalho {
+  margin-bottom: 24px;
+}
+
+.sobretitulo {
+  color: var(--primaria);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cabecalho h1 {
+  font-size: 2rem;
+  margin: 4px 0 8px;
+}
+
+.cabecalho p:last-child {
+  color: var(--suave);
+}
+
+/* ---------- Grupos ---------- */
+fieldset {
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 18px 20px 22px;
+  margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 700;
+  color: var(--primaria);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo.largo {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--texto);
+  background-color: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid rgba(36, 71, 181, 0.25);
+  border-color: var(--primaria);
+}
+
+/* ---------- Estados de validação ---------- */
+.campo.invalido input,
+.campo.invalido select {
+  border-color: var(--erro);
+}
+
+.campo.valido input,
+.campo.valido select {
+  border-color: var(--ok);
+}
+
+.erro {
+  min-height: 1.1em;
+  color: var(--erro);
+  font-size: 0.82rem;
+}
+
+.termos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+/* ---------- Botões ---------- */
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.botao {
+  padding: 12px 28px;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primaria);
+  border: 2px solid var(--primaria);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #1b3790;
+}
+
+.botao:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.botao.secundario {
+  color: var(--primaria);
+  background-color: transparent;
+}
+
+.botao.secundario:hover {
+  background-color: #e8edfb;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 640px) {
+  .container {
+    padding: 20px 16px;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .acoes {
+    flex-direction: column-reverse;
+  }
+}
