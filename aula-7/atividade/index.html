@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pit Wall - Fórmula 1</title>
+  <link rel="stylesheet" href="./styles/global.css">
+  <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+
+  <header class="topo">
+    <a class="logo" href="#inicio">PIT<span>WALL</span></a>
+    <nav class="menu">
+      <a href="#circuitos">Circuitos</a>
+      <a href="#campeoes">Campeões</a>
+      <a href="#largada">Largada</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <p class="sobretitulo">Fórmula 1</p>
+      <h1>Velocidade, estratégia e milésimos de segundo</h1>
+      <p class="hero-texto">
+        Uma página para conhecer alguns circuitos clássicos, os maiores campeões
+        e testar o seu tempo de reação na largada.
+      </p>
+      <a class="botao" href="#largada">Testar minha largada</a>
+    </section>
+
+    <!-- Circuitos: botões gerados e detalhes calculados via JavaScript -->
+    <section id="circuitos">
+      <h2>Circuitos</h2>
+      <p class="descricao">Escolha um circuito e altere o número de voltas para calcular a distância.</p>
+
+      <div id="seletor-circuitos" class="seletor"></div>
+
+      <div class="detalhe" id="detalhe-circuito">
+        <div class="detalhe-info">
+          <h3 id="circuito-nome"></h3>
+          <p id="circuito-pais" class="pais"></p>
+          <dl class="dados">
+            <div>
+              <dt>Extensão da volta</dt>
+              <dd id="circuito-km"></dd>
+            </div>
+            <div>
+              <dt>Voltas na corrida</dt>
+              <dd id="circuito-voltas"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="calculadora">
+          <label for="campo-voltas">Quantas voltas?</label>
+          <input type="number" id="campo-voltas" min="1" max="200" value="1">
+          <p class="resultado-calc">
+            Distância: <strong id="distancia-total">0 km</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campeões: lista gerada e ordenada via JavaScript -->
+    <section id="campeoes">
+      <h2>Campeões mundiais</h2>
+      <p class="descricao">Pilotos com três ou mais títulos mundiais.</p>
+
+      <div class="ordenacao">
+        <button class="filtro ativo" data-ordem="titulos">Mais títulos</button>
+        <button class="filtro" data-ordem="nome">Ordem alfabética</button>
+      </div>
+
+      <ul id="lista-campeoes" class="lista-campeoes"></ul>
+    </section>
+
+    <!-- Jogo de reação -->
+    <section id="largada">
+      <h2>Teste sua largada</h2>
+      <p class="descricao">
+        Clique em iniciar, espere as cinco luzes acenderem e reaja assim que todas apagarem.
+        Se clicar antes, queimou a largada!
+      </p>
+
+      <div class="painel-largada">
+        <div class="luzes" aria-hidden="true">
+          <span class="luz"></span>
+          <span class="luz"></span>
+          <span class="luz"></span>
+          <span class="luz"></span>
+          <span class="luz"></span>
+        </div>
+
+        <button id="btn-largada" class="botao grande">Iniciar largada</button>
+
+        <p id="resultado-largada" class="mensagem" aria-live="polite">Pronto para largar?</p>
+        <p class="recorde">Melhor tempo: <strong id="melhor-tempo">--</strong></p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
